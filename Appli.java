@@ -3,6 +3,8 @@ package com.test;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -23,6 +25,22 @@ public class Appli {
    * Empty constructor
    */
   public Appli() {
+  }
+
+  private static void createFile(String pathOfFile) {
+    try {
+
+      File file = new File(pathOfFile);
+
+      if (file.createNewFile()) {
+        System.out.println("File is created!");
+      } else {
+        System.out.println("File already exists.");
+      }
+
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   /**
@@ -105,7 +123,9 @@ public class Appli {
         }
       }
     } catch (IOException e) {
-      e.printStackTrace();
+      if (e instanceof FileNotFoundException) {
+        createFile(PATH);
+      }
     } finally {
       try {
 
@@ -174,6 +194,8 @@ public class Appli {
   }
 
   public static void main(String[] args) {
+
+    System.out.println(System.getProperty("java.runtime.version"));
 
     Random random = new Random();
 

@@ -4,6 +4,10 @@ package com.test;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Etienne LANDURE
+ * @version 0.1
+ */
 public class Operations {
 
   /**
@@ -14,8 +18,8 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>
-   * @return List<Integer>
+   *          List<Integer>: le liste à classer
+   * @return List<Integer>: la liste classée dans l'odre croissant
    */
   public List<Integer> classementOrdreCroissant(List<Integer> liste) {
 
@@ -37,8 +41,8 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>
-   * @return List<Integer>
+   *          List<Integer>: le liste à classer
+   * @return List<Integer>: la liste classée dans l'odre décroissant
    */
   public List<Integer> classementOrdreDecroissant(List<Integer> liste) {
 
@@ -60,8 +64,8 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>
-   * @return List<Integer>
+   *          List<Integer>: le liste à classer
+   * @return List<Integer>: la liste classée dans l'odre croissant
    */
   public List<Integer> triCroissantParEchange(List<Integer> liste) {
     List<Integer> listeTriee = new ArrayList<Integer>(liste);
@@ -81,8 +85,8 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>
-   * @return List<Integer>
+   *          List<Integer>: le liste à classer
+   * @return List<Integer>: la liste classée dans l'odre décroissant
    */
   public List<Integer> triDecroissantParEchange(List<Integer> liste) {
     List<Integer> listeTriee = new ArrayList<Integer>(liste);
@@ -102,8 +106,8 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>
-   * @return List<Integer>
+   *          List<Integer>: le liste à classer
+   * @return List<Integer>: la liste classée dans l'odre croissant
    */
   public List<Integer> triCroissantABulle(List<Integer> liste) {
     List<Integer> listeTriee = new ArrayList<Integer>(liste);
@@ -115,8 +119,8 @@ public class Operations {
       for (int i = 0; i < listeTriee.size() - 1; i++) {
         if (listeTriee.get(i) > listeTriee.get(i + 1)) {
           int temp = listeTriee.get(i);
-          listeTriee.set(i, listeTriee.get(i+1));
-          listeTriee.set(i+1, temp);
+          listeTriee.set(i, listeTriee.get(i + 1));
+          listeTriee.set(i + 1, temp);
           permut = true;
         }
       }
@@ -127,8 +131,8 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>
-   * @return List<Integer>
+   *          List<Integer>: le liste à classer
+   * @return List<Integer>: la liste classée dans l'odre décroissant
    */
   public List<Integer> triDecroissantABulle(List<Integer> liste) {
     List<Integer> listeTriee = new ArrayList<Integer>(liste);
@@ -140,8 +144,8 @@ public class Operations {
       for (int i = 0; i < listeTriee.size() - 1; i++) {
         if (listeTriee.get(i) < listeTriee.get(i + 1)) {
           int temp = listeTriee.get(i);
-          listeTriee.set(i, listeTriee.get(i+1));
-          listeTriee.set(i+1, temp);
+          listeTriee.set(i, listeTriee.get(i + 1));
+          listeTriee.set(i + 1, temp);
           permut = true;
         }
       }
@@ -152,8 +156,9 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>
-   * @return boolean
+   *          List<Integer>: la liste à analyser
+   * @return boolean: retourne <b>true</b> si la liste est dans l'odre
+   *         croissant, sinon retourne <b>false</b>
    */
   public boolean isListeOrdreCroissant(List<Integer> liste) {
 
@@ -169,8 +174,9 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>
-   * @return boolean
+   *          List<Integer>: la liste à analyser
+   * @return boolean: retourne <b>true</b> si la liste est dans l'odre
+   *         décroissant, sinon retourne <b>false</b>
    */
   public boolean isListeOrdreDecroissant(List<Integer> liste) {
     for (int i = 0; i < liste.size(); i++) {
@@ -185,10 +191,10 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>
+   *          List<Integer>: la liste à analyser
    * @param nombreRecherche
-   *          int
-   * @return int
+   *          int: le nombre à rechercher dans la liste
+   * @return int: index indiquant le placement dans la liste du nombre recherché
    */
   public int rechercheLineaire(List<Integer> liste, int nombreRecherche) {
     int index = -1;
@@ -205,10 +211,10 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>
+   *          List<Integer>: la liste à analyser
    * @param nombreRecherche
-   *          int
-   * @return int
+   *          int: le nombre à rechercher dans la liste
+   * @return int: index indiquant le placement dans la liste du nombre recherché
    */
   public int rechercheBinaireCroissante(List<Integer> liste, int nombreRecherche) {
     int index = -1;
@@ -234,10 +240,10 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>
+   *          List<Integer>: la liste à analyser
    * @param nombreRecherche
-   *          int
-   * @return int
+   *          int: le nombre à rechercher dans la liste
+   * @return int: index indiquant le placement dans la liste du nombre recherché
    */
   public int rechercheBinaireDecroissante(List<Integer> liste, int nombreRecherche) {
     int index = -1;

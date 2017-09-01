@@ -12,8 +12,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * @author Etienne LANDURE
+ * @version 0.1
+ */
 public class Appli {
 
+  /**
+   * Taille maximale de la liste et valeur maximale présente dans la liste
+   */
   private static final int MAXIMUM_INT = 1500;
 
   /**
@@ -27,6 +34,12 @@ public class Appli {
   public Appli() {
   }
 
+  /**
+   * Méthode permettant de créer un fichier
+   * 
+   * @param pathOfFile
+   *          String: le chemin relatif
+   */
   private static void createFile(String pathOfFile) {
     try {
 
@@ -44,11 +57,13 @@ public class Appli {
   }
 
   /**
+   * Méthode cherchant un nombre dans une liste de manière linéaire
+   * 
    * @param liste
-   *          List<Integer>
+   *          List<Integer>: la liste à analyser
    * @param value
-   *          int
-   * @return int
+   *          int: le nombre recherché
+   * @return int: index indiquant le placement dans la liste du nombre recherché
    */
   private static int searchOccurenceInListWithLinearMethod(List<Integer> liste, int value) {
     int index = -1;
@@ -71,11 +86,13 @@ public class Appli {
   }
 
   /**
+   * Méthode cherchant un nombre dans une liste de manière binaire
+   * 
    * @param liste
-   *          List<Integer>
+   *          List<Integer>: la liste à analyser
    * @param value
-   *          int
-   * @return int
+   *          int: le nombre recherché
+   * @return int: index indiquant le placement dans la liste du nombre recherché
    */
   private static int searchOccurenceInListWithBinaryMethod(List<Integer> liste, int value) {
     int index = -1;
@@ -100,6 +117,9 @@ public class Appli {
   }
 
   /**
+   * Méthode permettant de vérifier s'il y a un temps présent dans le fichier de
+   * sauvegarde et, si il existe, le retourne
+   * 
    * @return long: the time which is present in the file
    */
   private static long getValueOfTime() {
@@ -143,6 +163,9 @@ public class Appli {
   }
 
   /**
+   * Méthode permettant de changer le temps présent dans le fichier de
+   * sauvegarde
+   * 
    * @param newTime
    *          long: the new time to set in the file
    */
@@ -177,7 +200,8 @@ public class Appli {
    * Simple test to know if the execution time is better than before
    * 
    * @param actualTime
-   *          long
+   *          long: le temps à comparer avec la valeur déjà présente (ou pas)
+   *          dans le fichier de sauvegarde
    */
   private static void testIfTimeIsBetter(long actualTime) {
 
@@ -189,10 +213,19 @@ public class Appli {
 
   }
 
+  /**
+   * @param value
+   *          int: nombre à analyser
+   * @return int: la valeur positive du nombre passé en paramètre
+   */
   private static int testIfIntIsNegative(int value) {
     return value < 0 ? -1 * value : value;
   }
 
+  /**
+   * @param args
+   *          String[]: arguments
+   */
   public static void main(String[] args) {
 
     System.out.println(System.getProperty("java.runtime.version"));

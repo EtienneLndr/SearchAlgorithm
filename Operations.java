@@ -18,7 +18,7 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>: le liste à classer
+   *          List<Integer>: la liste à classer
    * @return List<Integer>: la liste classée dans l'odre croissant
    */
   public List<Integer> classementOrdreCroissant(List<Integer> liste) {
@@ -41,7 +41,7 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>: le liste à classer
+   *          List<Integer>: la liste à classer
    * @return List<Integer>: la liste classée dans l'odre décroissant
    */
   public List<Integer> classementOrdreDecroissant(List<Integer> liste) {
@@ -64,7 +64,7 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>: le liste à classer
+   *          List<Integer>: la liste à classer
    * @return List<Integer>: la liste classée dans l'odre croissant
    */
   public List<Integer> triCroissantParEchange(List<Integer> liste) {
@@ -85,7 +85,7 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>: le liste à classer
+   *          List<Integer>: la liste à classer
    * @return List<Integer>: la liste classée dans l'odre décroissant
    */
   public List<Integer> triDecroissantParEchange(List<Integer> liste) {
@@ -106,7 +106,7 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>: le liste à classer
+   *          List<Integer>: la liste à classer
    * @return List<Integer>: la liste classée dans l'odre croissant
    */
   public List<Integer> triCroissantABulle(List<Integer> liste) {
@@ -131,7 +131,7 @@ public class Operations {
 
   /**
    * @param liste
-   *          List<Integer>: le liste à classer
+   *          List<Integer>: la liste à classer
    * @return List<Integer>: la liste classée dans l'odre décroissant
    */
   public List<Integer> triDecroissantABulle(List<Integer> liste) {
